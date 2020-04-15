@@ -142,6 +142,42 @@ nav.top-bar {
     position: relative;
 }
 
+#intro > .content 
+{
+    font-family: 'Roboto';font-size: 3.5rem;
+    letter-spacing: 0.17rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    width: 25rem;
+}
+
+#intro > .content > .lab-name > p
+{
+    margin-bottom: 1rem;
+}
+
+#intro > .content > .lab-name > p:nth-child(1) > i 
+{
+    background-color: #f37f22;
+    color: white;
+}
+
+#intro > .content > .lab-name > p:nth-child(2) > i 
+{
+    background-color: #ef4f21;
+    color: white;
+}
+
+
+#intro > .content > .lab-name > p:nth-child(3) > i 
+{
+    background-color: #d12028;
+    color: white;
+}
+
+
 /* Delete this, DEVELOPMENT */
 section {
     border: 1px solid black;
