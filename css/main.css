@@ -13,6 +13,20 @@ body {
 ** Navbar styles
 ***********************************/
 
+a {
+    color: #373634;
+    text-decoration: none;
+}
+
+a:hover {
+    border-bottom: 2px solid #f37f22;
+}
+
+li {
+    padding: 20px;
+    font-family: 'Roboto';font-size: 1.5rem;
+}
+
 nav.top-bar {
     height: 70px;
     position: fixed;
@@ -39,7 +53,10 @@ nav.top-bar {
 
 .top-bar .right ul {
     position: absolute;
-    right: -100%;
+    display: flex;
+    right: 0%;
+    list-style: none;
+    margin: 0;
 }
 
 .hamburger {
@@ -149,7 +166,7 @@ nav.top-bar {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80vh;
+    height: 80%;
     width: 25rem;
 }
 
@@ -175,6 +192,29 @@ nav.top-bar {
 {
     background-color: #d12028;
     color: white;
+}
+
+/***********************************
+** Media Queries
+***********************************/
+
+@media only screen and (max-width: 610px) { /* Responsividad de la pantalla */
+    #intro > .content 
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    .top-bar .right ul {
+        position: absolute;
+        display: none;
+        right: -100%;
+        list-style: none;
+    }
+
 }
 
 
