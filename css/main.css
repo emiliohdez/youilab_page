@@ -208,13 +208,25 @@ nav.top-bar {
         width: 100%;
     }
 
-    .top-bar .right ul {
+    .top-bar .right ul 
+    {
         position: absolute;
         display: none;
         right: -100%;
         list-style: none;
     }
 
+    .hamburger .hamburger--squeeze .js-hamburger
+    {
+        display: none;
+    }
+
+}
+
+h3 
+{
+    font-family: 'Roboto';font-size: 3.5rem;
+    align-self: center;
 }
 
 
