@@ -275,12 +275,33 @@ nav.top-bar {
   color: black;
 }
 
+.flip-box-front img {
+  height: 100%;
+  width: 100%;
+}
+
 /* Style the back side */
 .flip-box-back {
   background-color: #ef4f21;
   color: white;
   transform: rotateY(180deg);
 } 
+
+.flip-box-back img {
+    height: 100%;
+    width: 100%;
+}
+
+/***********************************
+** Laboratory-Section Styles
+***********************************/ 
+
+#laboratory img 
+{
+    height: 100%;
+    width: 100%;
+}
+
 
 /***********************************
 ** Media Queries
