@@ -9,10 +9,11 @@ body {
     overflow-x: hidden;
 }
 
-h2 
+span 
 {
     font-family: 'Roboto';font-size: 0.7rem;
     color: white;
+    height: 100%;
 }
 
 h3 
@@ -171,16 +172,14 @@ nav.top-bar {
     position: relative;
 }
 
-#intro > .content 
+#intro > .content
 {
     font-family: 'Roboto';font-size: 3.5rem;
     letter-spacing: 0.17rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 80%;
-    width: 25rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
+
 
 #intro > .content > .lab-name > p
 {
@@ -214,21 +213,16 @@ nav.top-bar {
 .grid-wrapper 
 {
     display: grid;
-    grid-gap: 20px;
-    grid-template-rows: 3;
-    grid-template-columns: 3;
+    grid-template-rows: 30% 70%;
 }
 
-.box > img 
-{
-    width: 100%;
-}
 
-.box
+.boxes
 {
-    background-color: #444;
-    padding: 130px;
-    margin: 20px;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
 }
 
 
@@ -238,11 +232,11 @@ nav.top-bar {
 
  /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-box {
-  background-color: transparent;
-  width: 300px;
-  height: 200px;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    text-align: center;
 }
 
 /* This container is needed to position the front and back side */
@@ -273,6 +267,7 @@ nav.top-bar {
 .flip-box-front {
   background-color: #d12028;
   color: black;
+  text-align: center;
 }
 
 .flip-box-front img {
@@ -285,6 +280,7 @@ nav.top-bar {
   background-color: #ef4f21;
   color: white;
   transform: rotateY(180deg);
+  text-align: center;
 } 
 
 .flip-box-back img {
@@ -298,8 +294,8 @@ nav.top-bar {
 
 #laboratory img 
 {
-    height: 100%;
-    width: 100%;
+    height: 50%;
+    width: 50%;
 }
 
 
@@ -326,6 +322,11 @@ nav.top-bar {
     }
 
     .hamburger .hamburger--squeeze .js-hamburger
+    {
+        display: none;
+    }
+
+    #intro > .content > .grid-wrapper
     {
         display: none;
     }
