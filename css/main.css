@@ -7,37 +7,44 @@ body {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
+    font-family: 'Roboto';
 }
 
 span 
 {
-    font-family: 'Roboto';font-size: 0.7rem;
+    font-size: 2rem;
     color: white;
-    height: 100%;
+    vertical-align: middle;
+    display: inline-block;
+    line-height: normal;
 }
 
 h3 
 {
-    font-family: 'Roboto';font-size: 1.5rem;
+    font-size: 3.5rem;
     color: #f37f22;
+    padding: 30px;
+    width: 100%;
 }
 
 /***********************************
 ** Navbar styles
 ***********************************/
 
-a {
+a 
+{
     color: #373634;
     text-decoration: none;
 }
 
-a:hover {
+a:hover 
+{
     border-bottom: 2px solid #f37f22;
 }
 
 li {
     padding: 20px;
-    font-family: 'Roboto';font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 
 nav.top-bar {
@@ -74,7 +81,7 @@ nav.top-bar {
 
 .hamburger {
     font: inherit;
-    display: inline-block;
+    display: none;
     overflow: visible;
     margin: 0;
     padding: 25px 15px;
@@ -181,25 +188,25 @@ nav.top-bar {
 }
 
 
-#intro > .content > .lab-name > p
+#intro p
 {
     margin-bottom: 1rem;
 }
 
-#intro > .content > .lab-name > p:nth-child(1) > i 
+#intro p:nth-child(1) > i 
 {
     background-color: #f37f22;
     color: white;
 }
 
-#intro > .content > .lab-name > p:nth-child(2) > i 
+#intro p:nth-child(2) > i 
 {
     background-color: #ef4f21;
     color: white;
 }
 
 
-#intro > .content > .lab-name > p:nth-child(3) > i 
+#intro p:nth-child(3) > i 
 {
     background-color: #d12028;
     color: white;
@@ -223,39 +230,39 @@ nav.top-bar {
     grid-template-rows: auto auto auto;
     grid-template-columns: auto auto auto;
     grid-gap: 10px;
+    text-align: center;
+    line-height: 170px;
 }
 
 
 /***********************************
-** Horizontal Flips
+** Boxes Flips
 ***********************************/
 
- /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-box {
+ /* The flip box container */
+.flip-box 
+{
     background-color: transparent;
     width: 300px;
     height: 200px;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    perspective: 1000px; /* 3D effect */
     text-align: center;
 }
 
 /* This container is needed to position the front and back side */
-.flip-box-inner {
+.flip-box-inner 
+{
   position: relative;
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 0.8s;
+  transition: transform 2.0s;
   transform-style: preserve-3d;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-box:hover .flip-box-inner {
-  transform: rotateY(180deg);
-}
-
 /* Position the front and back side */
-.flip-box-front, .flip-box-back {
+.flip-box-front, .flip-box-back 
+{
   position: absolute;
   width: 100%;
   height: 100%;
@@ -264,38 +271,117 @@ nav.top-bar {
 }
 
 /* Style the front side */
-.flip-box-front {
+.flip-box-front 
+{
   background-color: #d12028;
   color: black;
   text-align: center;
 }
 
-.flip-box-front img {
+.flip-box-front img 
+{
   height: 100%;
   width: 100%;
 }
 
+
+/***********************************
+** Horizontal Flips
+***********************************/
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.horizontal-flip:hover .flip-box-inner 
+{
+  transform: rotateY(180deg);
+}
+
 /* Style the back side */
-.flip-box-back {
+.horizontal-flip .flip-box-back 
+{
   background-color: #ef4f21;
   color: white;
   transform: rotateY(180deg);
   text-align: center;
 } 
 
-.flip-box-back img {
+.flip-box-back img 
+{
     height: 100%;
     width: 100%;
 }
+
+
+/***********************************
+** Vertical Flips
+***********************************/
+
+/* Do a vertical flip when you move the mouse over the flip box container */
+.vertical-flip:hover .flip-box-inner 
+{
+  transform: rotateX(180deg);
+}
+
+/* Style the back side */
+.vertical-flip .flip-box-back 
+{
+  background-color: #ef4f21;
+  color: white;
+  transform: rotateX(180deg);
+  text-align: center;
+} 
+
 
 /***********************************
 ** Laboratory-Section Styles
 ***********************************/ 
 
+#laboratory
+{
+    display: flex;
+    font-size: 1.5rem;
+    flex-direction: column;
+}
+
 #laboratory img 
 {
-    height: 50%;
-    width: 50%;
+    height: 60%;
+    width: 60%;
+    align-self: center;
+    margin-bottom: 2em;
+}
+
+#laboratory > p
+{
+    margin-bottom: 2em;
+    margin-left: 30px;
+}
+
+#laboratory p > i 
+{
+    background-color: #d12028;
+    color: white;
+    padding: 1px;
+    border-radius: 4px;
+}
+
+#laboratory p:nth-child(3) > i:first-child 
+{
+    background-color: #f37f22;
+    color: white;
+}
+
+
+#laboratory p:nth-child(3) > i:nth-child(2) 
+{
+    background-color: #ef4f21;
+    color: white;
+}
+
+#laboratory p:nth-child(3) > i:nth-child(3) 
+{
+    background-color: #1aaee8;
+    color: white;
+    font-weight: bold;
 }
 
 
@@ -303,7 +389,7 @@ nav.top-bar {
 ** Media Queries
 ***********************************/
 
-@media only screen and (max-width: 610px) { /* Responsividad de la pantalla */
+@media only screen and (max-width: 610px) { /* Screen Responsiveness */
     #intro > .content 
     {
         display: flex;
@@ -321,22 +407,34 @@ nav.top-bar {
         list-style: none;
     }
 
-    .hamburger .hamburger--squeeze .js-hamburger
-    {
-        display: none;
-    }
-
     #intro > .content > .grid-wrapper
     {
         display: none;
     }
 
+    .hamburger {
+        font: inherit;
+        display: inline-block;
+        overflow: visible;
+        margin: 0;
+        padding: 25px 15px;
+        cursor: pointer;
+        transition-timing-function: linear;
+        transition-duration: .15s;
+        transition-property: opacity, filter;
+        text-transform: none;
+        color: inherit;
+        border: 0;
+        background: transparent;
+        height: 100%;
+    }
 }
+
 
 
 /* Delete this, DEVELOPMENT */
 
-section {
+/*section {
     border: 1px solid black;
 }
 
@@ -352,4 +450,4 @@ section>.background {
 
 section>.content{
     
-}
+}*/

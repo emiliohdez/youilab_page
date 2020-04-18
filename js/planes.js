@@ -1,5 +1,7 @@
 // available paper plane models
 let planeColors = ["blue", "yellow", "red", "white"];
+var vertical = document.querySelector(".vertical-flip");
+var horizontal = document.querySelector(".horizontal-flip");
 
 /**
 *   We use this function for generating a single paper plane animated component
@@ -39,10 +41,3 @@ function generatePlaneasAnimation() {
 //Calling the animation function.
 generatePlaneasAnimation();
 
-
-/**
-* 
-*
-*
-*
-*/
