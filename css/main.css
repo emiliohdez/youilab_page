@@ -181,17 +181,23 @@ nav.top-bar {
 
 #intro > .content
 {
-    font-family: 'Roboto';font-size: 3.5rem;
+    font-family: 'Roboto';font-size: 5.5rem;
     letter-spacing: 0.17rem;
     display: grid;
     grid-template-columns: 50% 50%;
     height: 100%;
 }
 
+#intro .lab-name
+{
+    align-self: center;
+    margin-left: 10rem;
+}
+
 
 #intro p
 {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 #intro p:nth-child(1) > i 
@@ -212,7 +218,6 @@ nav.top-bar {
     background-color: #d12028;
     color: white;
 }
-
 
 /***********************************
 ** Grid
@@ -398,6 +403,12 @@ nav.top-bar {
         justify-content: center;
         height: 100%;
         width: 100%;
+        font-size: 3.5rem;
+    }
+
+    #intro .lab-name
+    {
+        margin-left: 0;
     }
 
     .top-bar .right ul 
@@ -441,7 +452,7 @@ nav.top-bar {
 
 section.padded-section {
     padding: 50px;
-}
+}*/
 
 section>.background {
     position: absolute;
@@ -449,6 +460,6 @@ section>.background {
     height: 100%;
 }
 
-section>.content{
+/*section>.content{
     
 }*/
