@@ -86,8 +86,7 @@ li {
     float: right;
 }
 
-.top-bar .right ul {
-    position: absolute;
+.nav-links {
     display: flex;
     right: 0%;
     list-style: none;
@@ -174,6 +173,9 @@ li {
     top: 0;
     transition: top 75ms ease, opacity 75ms ease .12s;
     opacity: 0;
+    clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: (1000px at 90% -10%);   
+        pointer-events: all;
 }
 
 .hamburger-inner {
@@ -422,6 +424,16 @@ li {
 
 
 /***********************************
+** Project-Section Styles
+***********************************/ 
+
+#projects
+{
+  margin: 0 auto;
+  height: 100vh;
+}
+
+/***********************************
 ** Media Queries
 ***********************************/
 
@@ -441,12 +453,75 @@ li {
         margin-left: 0;
     }
 
-    .top-bar .right ul 
+    nav 
     {
-        position: absolute;
-        display: none;
-        right: -100%;
-        list-style: none;
+        position: relative;
+    }
+
+    .nav-links 
+    {
+        position: fixed;
+        background: #a2cce0;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(0.4% at 100% -10%);
+        -webkit-clip-path: (0.4% at 100% -10%);
+        transition: all 2s ease-out;
+        pointer-events: none;
+    }
+
+    .nav-links.open
+    {
+        clip-path: circle(120% at 100% 0%);
+        -webkit-clip-path: circle(120% at 100% 0%);
+        pointer-events: all;
+        z-index: 9999%;
+    }
+
+    .nav-links > li
+    {
+        opacity 0;
+    }
+
+    .nav-links li:nth-child(1)
+    {
+        transition: all 1 ease 1s;
+    }
+
+    .nav-links li:nth-child(2)
+    {
+        transition: all 2s ease 2s;
+    }
+
+    .nav-links li:nth-child(3)
+    {
+        transition: all 3s ease 3s;
+    }
+
+    .nav-links li:nth-child(4)
+    {
+        transition: all 4s ease 4s;
+    }
+
+    .nav-links li:nth-child(5)
+    {
+        transition: all 5s ease 5s;
+    }
+
+    .nav-links li:nth-child(6)
+    {
+        transition: all 6s ease 6s;
+    }
+
+    li.fade 
+    {
+        opacity: 1;
+    }
+
+    a
+    {
+        color:white;
     }
 
     #intro > .content > .grid-wrapper
@@ -460,20 +535,13 @@ li {
     }
 
     .hamburger {
-        font: inherit;
-        display: inline-block;
-        overflow: visible;
-        margin: 0;
-        padding: 25px 15px;
+        position: absolute;
         cursor: pointer;
-        transition-timing-function: linear;
-        transition-duration: .15s;
-        transition-property: opacity, filter;
-        text-transform: none;
-        color: inherit;
-        border: 0;
-        background: transparent;
-        height: 100%;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+        display: inline-block;
     }
 }
 

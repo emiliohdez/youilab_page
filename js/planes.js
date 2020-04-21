@@ -41,34 +41,52 @@ generatePlaneasAnimation();
 
 
 /**
+* We use the next event listener to toggle the class .open to our hamburger, so 
+* when clicked, it will have a nice clip-path transition
+*/
+
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+const links = document.querySelectorAll(".nav-links li");
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle("open");
+    links.forEach(link => {
+        link.classList.toggle("fade");
+    })
+});
+
+/**
 *
 *
 *
 *
 **/
 
-function generateFlips(type) {
-    if(type == "vertical-flip") {
-        $(".flip-box-inner").style.transform = "rotateX(180deg);";
-        sleep(3000);
-        $(".flip-box-back").style.transform = "rotateX(180deg);";
-    }
-    else if(type == "horizontal-flip") {
-        $(".flip-box-inner").style.transform = "rotateY(180deg);";
-        sleep(3000);
-        $(".flip-box-back").style.transform = "rotateY(180deg);";
-    }
-    setTimeout(generateFlips, 2000);
-}
+// function generateFlips(type) {
+//     if(type == "vertical-flip") {
+//         $(".flip-box-inner").style.transform = "rotateX(180deg);";
+//         sleep(3000);
+//         $(".flip-box-back").style.transform = "rotateX(180deg);";
+//     }
+//     else if(type == "horizontal-flip") {
+//         $(".flip-box-inner").style.transform = "rotateY(180deg);";
+//         sleep(3000);
+//         $(".flip-box-back").style.transform = "rotateY(180deg);";
+//     }
+//     setTimeout(generateFlips, 2000);
+// }
 
 
-function sleep(milliseconds) {
-  const date = Date.now();
-  let currentDate = null;
-  do {
-    currentDate = Date.now();
-  } while (currentDate - date < milliseconds);
-}
+// function sleep(milliseconds) {
+//   const date = Date.now();
+//   let currentDate = null;
+//   do {
+//     currentDate = Date.now();
+//   } while (currentDate - date < milliseconds);
+// }
 
-generateFlips($(".flip-box." + ""));
+// generateFlips($(".flip-box." + ""));
+
+
 
