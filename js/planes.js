@@ -1,7 +1,5 @@
 // available paper plane models
 let planeColors = ["blue", "yellow", "red", "white"];
-var vertical = document.querySelector(".vertical-flip");
-var horizontal = document.querySelector(".horizontal-flip");
 
 /**
 *   We use this function for generating a single paper plane animated component
@@ -40,4 +38,37 @@ function generatePlaneasAnimation() {
 
 //Calling the animation function.
 generatePlaneasAnimation();
+
+
+/**
+*
+*
+*
+*
+**/
+
+function generateFlips(type) {
+    if(type == "vertical-flip") {
+        $(".flip-box-inner").style.transform = "rotateX(180deg);";
+        sleep(3000);
+        $(".flip-box-back").style.transform = "rotateX(180deg);";
+    }
+    else if(type == "horizontal-flip") {
+        $(".flip-box-inner").style.transform = "rotateY(180deg);";
+        sleep(3000);
+        $(".flip-box-back").style.transform = "rotateY(180deg);";
+    }
+    setTimeout(generateFlips, 2000);
+}
+
+
+function sleep(milliseconds) {
+  const date = Date.now();
+  let currentDate = null;
+  do {
+    currentDate = Date.now();
+  } while (currentDate - date < milliseconds);
+}
+
+generateFlips($(".flip-box." + ""));
 

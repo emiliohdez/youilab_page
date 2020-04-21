@@ -14,26 +14,28 @@
 </head>
 
 <body>
-    <nav class="top-bar">
-        <div class="left">
-            <img src="img/youilab-logo.png" />
-        </div>
-        <div class="right">
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">People</a></li>
-                <li><a href="">Projects</a></li>
-                <li><a href="">Publications</a></li>
-                <li><a href="">News&Press</a></li>
-                <li><a href="">Contact</a></li>
-            </ul>
-            <div class="hamburger hamburger--squeeze js-hamburger" onclick='this.classList.toggle("is-active");'>
-                <div class="hamburger-box">
-                    <div class="hamburger-inner"></div>
+    <header>
+        <nav class="top-bar">
+            <div class="left">
+                <img src="img/youilab-logo.png" />
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">People</a></li>
+                    <li><a href="">Projects</a></li>
+                    <li><a href="">Publications</a></li>
+                    <li><a href="">News&Press</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+                <div class="hamburger hamburger--squeeze js-hamburger" onclick='this.classList.toggle("is-active");'>
+                    <div class="hamburger-box">
+                        <div class="hamburger-inner"></div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
     <section id="intro">
         <div class="background">
             <div class="plane-container"></div>
@@ -121,16 +123,16 @@
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
     </section>
     <section id="laboratory" class="padded-section">
-        <h3>What is the You-i Lab?</h3>
-        <p>We are a multidisciplinary <i>lab</i> for youth empowerment, technological innovation and it's application in projects with social impact.</p>
-        <p>Together <i>You</i> and <i>i</i> can <i>#jointhechange</i></p>
-        <img src="img/team/lab.jpg">
+        <h3 class="fade-in">What is the You-i Lab?</h3>
+        <p class="fade-in">We are a multidisciplinary <i>lab</i> for youth empowerment, technological innovation and it's application in projects with social impact.</p>
+        <p class="fade-in">Together <i>You</i> and <i>i</i> can <i>#jointhechange</i></p>
+        <img class="fade-in" data-src="img/team/lab.jpg">
         <p>The rapid advances in information technology are having a wide-ranging impact in the life of people around the world. Although these advances present significant challenges to society, these also offer unprecedented opportunities for people to connect, interact, innovate, and become active agents for positive social change within their communities.</p>
         <br>
         <p>The You-i Lab aims to engage and empower youth through the use of ICTs and open innovation methodologies to develop projects for the public good in the Global South.</p>
@@ -140,6 +142,8 @@
     </section>    
     <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
     <script type="text/javascript" src="js/planes.js"></script>
+    <script type="text/javascript" src="js/observers.js"></script>
+    <script type="text/javascript" src="js/lazy-load.js"></script>
 </body>
 
 </html>

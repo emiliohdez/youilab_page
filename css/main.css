@@ -48,11 +48,25 @@ li {
     font-size: 1.5rem;
 }
 
-nav.top-bar {
+.top-bar {
     height: 70px;
     position: fixed;
     top: 0;
     width: 100%;
+    transition: background 250ms ease-in;
+}
+
+.nav-changed > .top-bar
+{
+    transition: background 250ms ease-in;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+    background-color: black;
+    z-index: 9999;
+}
+
+.nav-changed a
+{
+    color: white;
 }
 
 .top-bar>* {
@@ -201,23 +215,25 @@ nav.top-bar {
     margin-bottom: 2rem;
 }
 
+#intro p > i
+{
+    color: white;
+    border-radius: 3px;}
+
 #intro p:nth-child(1) > i 
 {
-    background-color: #f37f22;
-    color: white;
+    background-color: #f37f22;   
 }
 
 #intro p:nth-child(2) > i 
 {
     background-color: #ef4f21;
-    color: white;
 }
 
 
 #intro p:nth-child(3) > i 
 {
     background-color: #d12028;
-    color: white;
 }
 
 /***********************************
@@ -391,6 +407,17 @@ nav.top-bar {
     background-color: #1aaee8;
     color: white;
     font-weight: bold;
+}
+
+.fade-in 
+{
+    opacity: 0;
+    transition: opacity 1000ms ease-in;
+}
+
+.fade-in.appear
+{
+    opacity: 1;
 }
 
 
