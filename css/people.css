@@ -10,24 +10,6 @@ body {
     font-family: 'Roboto';
 }
 
-span 
-{
-    font-size: 2rem;
-    color: white;
-    vertical-align: middle;
-    display: inline-block;
-    line-height: normal;
-    font-weight: bold;
-}
-
-h3 
-{
-    font-size: 3.5rem;
-    color: #f37f22;
-    padding: 30px;
-    width: 100%;
-}
-
 /***********************************
 ** Navbar styles
 ***********************************/
@@ -188,273 +170,34 @@ li {
 }
 
 
+
 /***********************************
-** Intro Styles
+** Grid Wrapper
 ***********************************/
 
-#intro {
-    height: calc(100% - 70px);
-    margin-top: 70px;
-    width: 100%;
-    position: relative;
+/* GRID */
+.grid-wrapper {
+    margin-top: 10%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
 }
 
-#intro > .content
-{
-    font-family: 'Roboto';font-size: 5.5rem;
-    letter-spacing: 0.17rem;
-    display: grid;
-    grid-template-columns: 50% 50%;
+.box > img {
+    width: 100%;
     height: 100%;
 }
 
-#intro .lab-name
-{
-    align-self: center;
-    margin-left: 10rem;
-}
 
 
-#intro p
-{
-    margin-bottom: 2rem;
-}
-
-#intro p > i
-{
-    color: white;
-    border-radius: 3px;}
-
-#intro p:nth-child(1) > i 
-{
-    background-color: #f37f22;   
-}
-
-#intro p:nth-child(2) > i 
-{
-    background-color: #ef4f21;
-}
 
 
-#intro p:nth-child(3) > i 
-{
-    background-color: #d12028;
-}
-
-/***********************************
-** Grid
-***********************************/
-
-.grid-wrapper 
-{
-    display: grid;
-    grid-template-rows: 30% 70%;
-}
-
-
-.boxes
-{
-    display: grid;
-    grid-template-rows: auto auto auto;
-    grid-template-columns: auto auto auto;
-    grid-gap: 10px;
-    text-align: center;
-    line-height: 170px;
-}
-
-
-/***********************************
-** Boxes Flips
-***********************************/
-
- /* The flip box container */
-.flip-box 
-{
-    background-color: transparent;
-    width: auto;
-    height: auto;
-    perspective: auto; /* 3D effect */
-    text-align: center;
-}
-
-/* This container is needed to position the front and back side */
-.flip-box-inner 
-{
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 2.0s;
-  transform-style: preserve-3d;
-}
-
-/* Position the front and back side */
-.flip-box-front, .flip-box-back 
-{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
-}
-
-/* Style the front side */
-.flip-box-front 
-{
-
-  background-color: #d12028;
-  color: black;
-  text-align: center;
-}
-
-.flip-box-front img 
-{
-  height: 100%;
-  width: 100%;
-}
-
-
-/***********************************
-** Horizontal Flips
-***********************************/
-
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.horizontal-flip:hover .flip-box-inner 
-{
-  transform: rotateY(180deg);
-}
-
-/* Style the back side */
-.horizontal-flip .flip-box-back 
-{
-  background-color: #ef4f21;
-  color: white;
-  transform: rotateY(180deg);
-  text-align: center;
-} 
-
-.flip-box-back img 
-{
-    height: 100%;
-    width: 100%;
-}
-
-
-/***********************************
-** Vertical Flips
-***********************************/
-
-/* Do a vertical flip when you move the mouse over the flip box container */
-.vertical-flip:hover .flip-box-inner 
-{
-  transform: rotateX(180deg);
-}
-
-/* Style the back side */
-.vertical-flip .flip-box-back 
-{
-  background-color: #ef4f21;
-  color: white;
-  transform: rotateX(180deg);
-  text-align: center;
-} 
-
-
-/***********************************
-** Laboratory-Section Styles
-***********************************/ 
-
-#laboratory
-{
-    display: flex;
-    font-size: 1.2rem;
-    flex-direction: column;
-    font-family: 'Work Sans', sans-serif;
-    text-align: justify;
-}
-
-#laboratory img 
-{
-    height: 60%;
-    width: 60%;
-    align-self: center;
-    margin-bottom: 2em;
-}
-
-#laboratory > p
-{
-    margin-bottom: 2em;
-    margin-left: 30px;
-}
-
-#laboratory p > i 
-{
-    background-color: #d12028;
-    color: white;
-    padding: 1px;
-    border-radius: 4px;
-}
-
-#laboratory p:nth-child(3) > i:first-child 
-{
-    background-color: #f37f22;
-    color: white;
-}
-
-
-#laboratory p:nth-child(3) > i:nth-child(2) 
-{
-    background-color: #ef4f21;
-    color: white;
-}
-
-#laboratory p:nth-child(3) > i:nth-child(3) 
-{
-    background-color: #1aaee8;
-    color: white;
-    font-weight: bold;
-}
-
-.fade-in 
-{
-    opacity: 0;
-    transition: opacity 1200ms ease-in;
-}
-
-.fade-in.appear
-{
-    opacity: 1;
-}
-
-
-/***********************************
-** Project-Section Styles
-***********************************/ 
-
-#projects
-{
-  margin: 0 auto;
-  height: 100vh;
-}
 
 /***********************************
 ** Media Queries
 ***********************************/
 
 @media only screen and (max-width: 769px) { /* Screen Responsiveness */
-    #intro > .content 
-    {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        width: 100%;
-        font-size: 3.5rem;
-    }
-
-    #intro .lab-name
-    {
-        margin-left: 0;
-    }
 
     nav 
     {
@@ -526,16 +269,6 @@ li {
         color:white;
     }
 
-    #intro > .content > .grid-wrapper
-    {
-        display: none;
-    }
-
-    #laboratory
-    {
-        margin-right: 20px;
-    }
-
     .hamburger {
         position: absolute;
         cursor: pointer;
@@ -546,25 +279,3 @@ li {
         display: inline-block;
     }
 }
-
-
-
-/* Delete this, DEVELOPMENT */
-
-/*section {
-    border: 1px solid black;
-}
-
-section.padded-section {
-    padding: 50px;
-}*/
-
-/*section>.background {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}*/
-
-/*section>.content{
-    
-}*/
